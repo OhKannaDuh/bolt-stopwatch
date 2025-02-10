@@ -1,6 +1,6 @@
 {
-    "name": "Stopwatch",
-    "version": "1.0",
-    "description": "A basic stopwatch plugin",
-    "main": "app.lua"
-  }
+  "name": "Stopwatch",
+  "version": "1.0.0",
+  "description": "A basic stopwatch plugin",
+  "main": "main.lua"
+}
