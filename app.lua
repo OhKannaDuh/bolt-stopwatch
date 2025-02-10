@@ -9,8 +9,8 @@ plugin:load_config({
             showdevtools = false,
             y = 0,
             x = 0,
-            height = 112,
-            width = 178
+            height = 70,
+            width = 150
         }
     }
 })
@@ -21,14 +21,10 @@ local app = EmbeddedBrowser(plugin, {
     width = plugin.config.data.window.app.width,
     height = plugin.config.data.window.app.height,
     showdevtools = plugin.config.data.window.app.showdevtools,
-    path = 'plugin://app/app.html'
+    path = 'plugin://app/dist/index.html'
 })
 
 plugin:save_config()
-
-app:onmessage('close', function()
-    plugin.bolt.close()
-end)
 
 plugin:start()
 app:open()
