@@ -24,7 +24,19 @@ local app = EmbeddedBrowser(plugin, {
     path = 'plugin://app/dist/index.html'
 })
 
-plugin:save_config()
+app:add_callback('reposition', function(event)
+    local x, y, w, h = event:xywh()
+    plugin.config.data.window.app.x = x
+    plugin.config.data.window.app.y = y
+    plugin.config.data.window.app.width = w
+    plugin.config.data.window.app.height = h
+    plugin:save_config()
+end)
+
+app:add_callback('after_close', function(event)
+    plugin:save_config()
+    plugin.bolt.close()
+end)
 
 plugin:start()
 app:open()
