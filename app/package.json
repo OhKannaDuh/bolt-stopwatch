@@ -11,6 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "koala": "github:OhKannaDuh/koala",
     "rune-ui": "github:OhKannaDuh/rune-ui",
     "vue": "^3.5.13"
   },

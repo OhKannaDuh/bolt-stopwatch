@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import BoltBrowser from "../BoltBrowser.ts";
 import { computed, ref } from "vue";
-
-defineProps<{
-  plugin: BoltBrowser;
-}>();
 
 const tps = 60;
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BoltBrowser from "../BoltBrowser.ts";
+import BoltBrowser from "koala/BoltBrowser.ts";
 
 defineProps<{
   plugin: BoltBrowser;
@@ -10,7 +10,7 @@ defineProps<{
   <div class="toolbar">
     <div class="toolbar-divet" @mousedown.prevent="plugin.resize()"></div>
     <div class="toolbar-main" @mousedown.prevent="plugin.reposition()"></div>
-    <div class="toolbar-close" @mousedown.prevent="plugin.close()"></div>
+    <div class="toolbar-close" @click.prevent="plugin.close()"></div>
   </div>
 </template>
 
