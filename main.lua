@@ -1,6 +1,6 @@
 require('sloth.library')
 
-local plugin = Plugin()
+local plugin = Plugin("Stopwatch")
 plugin.bolt.checkversion(1, 0)
 
 plugin:load_config({
